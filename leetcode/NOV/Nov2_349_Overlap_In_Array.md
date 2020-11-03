@@ -2,9 +2,8 @@
 
 ###### author:jerry
 
-* 递归算法
 
-```c++
+```java
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
         List<Integer> numList1 = toDistinctArrayList(nums1);
@@ -41,4 +40,5 @@ class Solution {
         }
         return result;
     }
+}
 ```
