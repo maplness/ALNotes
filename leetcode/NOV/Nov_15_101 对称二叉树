@@ -1,0 +1,20 @@
+# Nov_15_101 对称二叉树
+
+![](https://tva1.sinaimg.cn/large/0081Kckwgy1gkq70hs51uj318k0t8acg.jpg)
+
+``` C++
+class Solution {
+public:
+    bool check(TreeNode *p, TreeNode *q){
+        if(!p && !q) return true;
+        if(!p || !q) return false;
+        return p->val == q->val && check(p->left , q->right) && check(p->right , q->left);
+    }
+    bool isSymmetric(TreeNode* root) {
+        return check(root, root);
+    }
+};
+
+```
+
+我用两个指针p，q ，一开始都指向root， 如果这个树对称，那么p向右走和q向左走是相等的，p向左走和q向右走是相等的。构造这么一个递归函数。
