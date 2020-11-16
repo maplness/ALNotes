@@ -1,0 +1,19 @@
+# Nov_16_104 二叉树的最大深度
+
+![](https://tva1.sinaimg.cn/large/0081Kckwgy1gkrh5hjkt3j31ae0lc76q.jpg)
+
+``` c++
+class Solution {
+public:
+    int subTreeDepth(TreeNode *node){
+        if(!node) return 0;
+        return max(subTreeDepth(node->left) , subTreeDepth(node->right)) + 1;
+    }
+
+    int maxDepth(TreeNode* root) {
+        return subTreeDepth(root);
+    }
+};
+```
+
+递归的思想，分别找左子树和右子树要最大值
