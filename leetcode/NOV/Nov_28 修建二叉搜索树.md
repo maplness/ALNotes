@@ -16,4 +16,4 @@ public:
 };
 ```
 
-思路： 根据题目中是二叉搜索树，使用递归的思路 ， 认为trimBST(node)是理想子树， 如果node->val 大于 high ， 那么理想子树一定在该node左边， 反之一定在该node右边，如果不是，就在该node上修剪。
+思路： 根据题目中是二叉搜索树，使用递归的思路 ， 认为trimBST(node)是理想子树， 如果node->val 大于 high ， 那么理想子树一定在该node左边， 反之一定在该node右边，如果不是，就在该node上修剪。 1
